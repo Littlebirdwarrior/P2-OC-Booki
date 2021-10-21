@@ -61,17 +61,10 @@ header, main, footer {
 }
 
 /******************************--------------------------MEDIA*/
-/* Sur les écrans */
-/*@media screen and (min-width: 992px) and (max-width: 1920px) {*/
-/*    header , main, footer > nav {*/
-/*        min-width: 922px;*/
-/*        max-width: 1400px;*/
-/*        margin: 0 auto;*/
-/*    }*/
-/*}*/
 
-/* Sur  */
-@media all and (min-width: 768px) and (max-width: 992px) {
+
+/* Sur  desktop*/
+@media all and (min-width: 768px) and (max-width: 1920px) {
 
     header, main {
         min-width: 768px;
@@ -79,7 +72,7 @@ header, main, footer {
     }
 }
 
-/* Sur  */
+/* Sur mobile */
 @media all and (min-width: 250px) and (max-width: 768px) {
 
     body {
@@ -308,12 +301,15 @@ p, a {
     font-size: 12px;
 }
 
+a:hover {
+    color: #0065FC;
+}
+
 
 /*2-Style particuliers---------------------------------------------------------*/
 
 /*    a-header-----------------*/
 header {
-    max-width: 992px;
     margin: 0 auto;
     padding: 0 0 1%;
 }
@@ -388,16 +384,11 @@ main {
 
 #two >article {
     margin: 0 auto;
-    padding: 0 5%;
 }
 
 #two > article > div{
     padding: 2%;
     border-radius: 10px;
-}
-
-#two > article > div > h2{
-    padding: 2% ;
 }
 
 #two > article > div> a {
@@ -407,35 +398,21 @@ main {
 /* je crée la taille des deux conteneur gris*/
 
 .gray-left {
-    width: 63%;
+    width: 59%;
 }
 
 .gray-right {
-    width: 25%;
-    margin: 0 auto;
+    width: 30%;
 }
 
-/* je crée mes boxs de gauche*/
-
-#two > article > div div .box-two {
-    width: 29%;
-    height:50%;
-    margin-bottom: 5%;
-}
-
+/* les box à l'intérieurs ont tout la même apparences*/
 
 .box-two,
 .box-two-2 {
     background-color: #fff;
     border: solid 5px #fff;
-    border-radius: 10px;
+    border-radius: 15px;
 }
-
-.box-two img{
-    border-radius: 10px 10px 0 0;
-}
-
-/*la grande box de gauches*/
 
 .box-two > a,
 .box-two-2>a {
@@ -444,76 +421,86 @@ main {
     height: 100%;
 }
 
+/* je crée mes boxs de gauche*/
 
-.box-two > a > figure > img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.box-two > a > figure > figcaption {
-    width: 100%;
-    height: auto;
-    padding: 5%;
-    z-index: 1;
-}
-
-
-/*les box de droite */
-
-.h2-ajust {
-    margin-bottom: 6%;
-}
-
-#two > article > div .box-two-2 {
-    width: fit-content;
-    height: fit-content;
+#two > article > div div .box-two {
+    width: 159px;
+    height:130px;
     margin-bottom: 5%;
 }
 
-.box-two-2 img{
-    border-radius: 10px 0 0 10px;
+
+.box-two > a > figure > img {
+    width: 100%;
+    height: 74px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+
+/*les boxes en colonne de droite */
+
+
+#two > article > div .box-two-2 {
+    width: 95%;
+    height: 88px;
+    margin: 0 0 5%;
 }
 
 .box-two-2>a>figure>img {
-    width: 80px;
-    height: 80px;
+    width: 82px;
+    height: 88px;
     object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+
+/*mes figcaptions dans les box-two et box-two-2*/
+
+.box-two > a > figure > figcaption {
+    width: 100%;
+    height: 50px;
+    padding-left: 2%;
 }
 
 .box-two-2>a>figure>figcaption {
     width: 100%;
     height: auto;
     padding: 5%;
-    z-index: 1;
+}
+
+/*dans les box-two et box-two-2*/
+
+.box-two > a > figure > figcaption > h4,
+.box-tw-2 > a > figure > figcaption > div> h4{
+    margin: 5px 0 0;
+    color: black;
+}
+
+.box-two > a > figure > figcaption > p,
+.box-two-2 > a > figure > figcaption > div> p{
+    margin: 5px 0 0;
+}
+
+.box-two > a > figure > figcaption > ul,
+.box-two-2 > a > figure > figcaption > ul{
+    width: 50%;
+    margin: 5px 0 0;
+}
+
+.box-two > a > figure > figcaption > ul >li,
+.box-two-2 > a > figure > figcaption > ul >li{
+    color: #d5d5d5;
 }
 
 /***********************------------------MEDIA*/
 
 @media all and (min-width: 250px) and (max-width: 768px) {
 
-    /* je redimensionne la taille des deux conteneur gris et
-    et les paddings de son parent*/
-
-    #two >article {
-        margin: 0 auto;
+    /* je redimensionne la taille des deux conteneur gris*/
+    #two > article > div {
         padding: 0;
-    }
-
-    #two > article > div{
-        width: 80%;
-        padding: 5% 10% 0;
-        margin: 0 auto 5%;
         border-radius: 0;
-    }
-
-    #two > article > div > h2 {
-        text-align: center;
-        margin-left: -50px;
-    }
-
-    #two > article > div> a {
-        display: none;
     }
 
     .gray-left, .gray-right {
@@ -521,56 +508,76 @@ main {
         margin: 0;
     }
 
-    .gray-left {background-color: #fff}
 
-    /* je redimentionne mes box de la colonne de gauche*/
-
-    .h2-ajust {
-        margin: 0 auto;
-        max-width: 250px;
-    }
+    /*je redimensionne mes box de gauche*/
 
     #two > article > div div .box-two {
-        min-width: 250px;
-        height: 200px;
-        margin: 0 auto 50px;
-    }
-
-    .box-two > a > figure {
-        width: 100%;
-        height: 100%;
+        width: 95%;
+        height:150px;
+        margin: 0 auto 30px;
     }
 
     .box-two > a > figure > img {
         width: 100%;
-        height: 75%;
+        height: 84px;
         object-fit: cover;
+        border-radius: 10px 10px 0 0;
     }
 
+    /*je redimensionne mes box de droite*/
+
+    #two > article > div .box-two-2 {
+        width: 95%;
+        height: 88px;
+        margin: 0 0 5%;
+    }
+
+    .box-two-2>a>figure>img {
+        width: 82px;
+        height: 88px;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+    }
+
+
+    /*je redimensionne les figure de mes boxes*/
     .box-two > a > figure > figcaption {
         width: 100%;
-        height: auto;
-        padding: 5%;
-        z-index: 1;
+        height: 50px;
+        padding-left: 2%;
     }
 
-    /*les boxes de droites*/
-    #two > article > div .box-two-2 {
-        min-width: 250px;
-        height: 80px;
-        margin: 0 auto 5%;
+    .box-two-2>a>figure>figcaption {
+        width: auto;
+        height: 70px;
+        padding: 10px;
     }
+
+    .box-two > a > figure > figcaption > h4{
+        margin: 7px 0 0;
+    }
+    .box-two-2 > a > figure > figcaption > div> h4{
+        margin: 0;
+    }
+
+    .box-two > a > figure > figcaption > ul,
+    .box-two-2 > a > figure > figcaption > ul{
+        width: 15%;
+        margin: 10px 0 0;
+    }
+
+
 
 }
 
 /*-----section three*/
 
-/************************** SOUCIS : gouttière inégale si taille supérieur à 922px*/
+/************************** SOUCIS : gouttière inégale si taille supérieur à 992px*/
 #three {
     width: fit-content;
     height: auto;
     margin: 0 auto;
-    padding: 0 5% 5%;
+    padding: 0 0 5%;
 }
 
 #three article {
@@ -594,7 +601,7 @@ je crée donc des classes non incluse dans ma cascade*/
     border-radius: 10px 10px 0 0;
 }
 
-/*------------------ les tailles en % des boxes: avec les pixel, le site était trop petit sur un viewer de plus de 922px*/
+/*------------------ les tailles en % des boxes: avec les pixel, le site était trop petit sur un viewer de plus de 992px*/
 
 /*la grande box de gauches*/
 
@@ -741,10 +748,9 @@ je crée donc des classes non incluse dans ma cascade*/
 
 /*    c-footer-----------------*/
 
-footer nav {
+footer>nav {
     max-width: 992px;
     margin: 0 auto;
-    padding: 2% 5%;
 }
 
 footer nav div {
