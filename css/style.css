@@ -22,15 +22,6 @@ ficher style.css*/
 
 /*1-styles généraux et classe reutilisatbles---------------------------------------------------------*/
 
-
-/*    a-flexbox-----------------*/
-
-.flex {
-    display: flex;
-}
-
-/*-------applicable sur le parents*/
-
 /* reset perso*/
 
 p, a, b {
@@ -43,7 +34,6 @@ p, a, b {
 
 html, body {
     width: 100%;
-    margin: 0 auto;
     padding: 0;
 }
 
@@ -69,6 +59,7 @@ header, main, footer {
     header, main {
         min-width: 768px;
         max-width: 992px;
+        margin: 0 auto;
     }
 }
 
@@ -79,13 +70,21 @@ header, main, footer {
         font-size: 18px;
     }
 
-    header, main {
-        min-width: 250px;
-        max-width: 768px;
+    header, main, footer {
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
 /*-------------------------------------*/
+
+/*    a-flexbox-----------------*/
+
+.flex {
+    display: flex;
+}
+
+/*-------applicable sur le parents*/
 
 
 /*flex direction*/
@@ -284,8 +283,7 @@ header, main, footer {
 h1, h2 {
     font-weight: bold;
     font-size: 16px;
-    padding: 0 2%;
-    margin: 0 0 10px;
+    margin: 0 0 20px;
 }
 
 h4 {
@@ -310,8 +308,7 @@ a:hover {
     h1, h2 {
         font-weight: bold;
         font-size: 18px;
-        padding: 2%;
-        margin: 0 0 10px;
+        margin: 10px;
     }
 
     h4 {
@@ -393,16 +390,18 @@ header nav li a:hover, header nav li a:active {
 /*    b-main-----------------*/
 
 main {
-    max-width: 992px;
-    margin: 0 auto;
 }
 
 /*-----section two*/
 #two {
-    margin-bottom: 2%;
+    max-width:992px;
+    margin: 0 auto 5%;
+    padding: 0 0 5%;
 }
 
 #two >article {
+    width: 98%;
+    height: 100%;
     margin: 0 auto;
 }
 
@@ -517,6 +516,13 @@ main {
 
 @media all and (min-width: 250px) and (max-width: 768px) {
 
+    #two article {
+        width: 92%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+
     /* je redimensionne la taille des deux conteneur gris*/
     #two > article > div {
         padding: 0;
@@ -536,14 +542,14 @@ main {
     /*je redimensionne mes box de gauche*/
 
     #two > article > div div .box-two {
-        width: 95%;
-        height:150px;
+        width: 100%;
+        height:300px;
         margin: 0 auto 30px;
     }
 
     .box-two > a > figure > img {
         width: 100%;
-        height: 84px;
+        height: 220px;
         object-fit: cover;
         border-radius: 10px 10px 0 0;
     }
@@ -551,14 +557,14 @@ main {
     /*je redimensionne mes box de droite*/
 
     #two > article > div .box-two-2 {
-        width: 95%;
-        height: 88px;
+        width: 100%;
+        height: 200px;
         margin: 0 0 5%;
     }
 
     .box-two-2>a>figure>img {
-        width: 82px;
-        height: 88px;
+        width: 200px;
+        height: 200px;
         object-fit: cover;
         border-radius: 10px 0 0 10px;
     }
@@ -567,7 +573,7 @@ main {
     /*je redimensionne les figure de mes boxes*/
     .box-two > a > figure > figcaption {
         width: 100%;
-        height: 50px;
+        height: 200px;
         padding-left: 2%;
     }
 
@@ -578,7 +584,7 @@ main {
     }
 
     .box-two > a > figure > figcaption > h4{
-        margin: 7px 0 0;
+        margin: 20px 0 0;
     }
     .box-two-2 > a > figure > figcaption > div> h4{
         margin: 0;
@@ -587,7 +593,7 @@ main {
     .box-two > a > figure > figcaption > ul,
     .box-two-2 > a > figure > figcaption > ul{
         width: 15%;
-        margin: 10px 0 0;
+        margin: 100px 0 0;
     }
 
 
@@ -598,15 +604,15 @@ main {
 
 /************************** SOUCIS : gouttière inégale si taille supérieur à 992px*/
 #three {
-    width: fit-content;
-    height: auto;
+    max-width:992px;
     margin: 0 auto;
     padding: 0 0 5%;
 }
 
 #three article {
-    width: 100%;
+    width: 98%;
     height: 100%;
+    margin: 0 auto;
 }
 
 /* je veux créer un système réutilisable pour la suite du site
@@ -616,7 +622,6 @@ je crée donc des classes non incluse dans ma cascade*/
 /* toutes les box de la section three on un style*/
 
 .box-three {
-    background-color: #fff;
     border-radius: 10px;
 }
 
@@ -636,19 +641,19 @@ je crée donc des classes non incluse dans ma cascade*/
 }
 
 .big > a > figure {
-    width: 92%;
-    height: 100%;
+    width: 194px;
+    height: 290px;
 }
 
 .big > a > figure > img {
     width: 100%;
-    height: 89%;
+    height: 254px;
     object-fit: cover;
 }
 
 .big > a > figure > figcaption {
     width: 100%;
-    height: 10%;
+    height:32px;
     padding-left: 5%;
 }
 
@@ -657,6 +662,10 @@ je crée donc des classes non incluse dans ma cascade*/
 
 /*redimentionner les colonnes*/
 
+.column-1, .column-2 {
+    width: 416px;
+}
+
 .column-2> div > a {
     display: block;
     width: 100%;
@@ -664,15 +673,15 @@ je crée donc des classes non incluse dans ma cascade*/
 }
 
 .column-2 > div > a > figure {
-    width: 92%;
+    width: 100%;
     height: 100%;
 }
 
 /*la medium box*/
 
 .medium {
-    width: 100%;
-    height: 50%;
+    width: 194px;
+    height: 155px;
 }
 
 .medium>a,  .medium>a>figure {
@@ -683,13 +692,13 @@ je crée donc des classes non incluse dans ma cascade*/
 
 .medium>a>figure>img {
     width: 100%;
-    height: 78%;
+    height: 120px;
     object-fit: cover;
 }
 
 .medium > a > figure > figcaption {
     width: 100%;
-    height: 21%;
+    height: 32px;
     padding-left: 5%;
 }
 
@@ -697,8 +706,8 @@ je crée donc des classes non incluse dans ma cascade*/
 /*la petite box*/
 
 .small {
-    width: 100%;
-    height: 40%;
+    width: 194px;
+    height: 107px;
 }
 
 .small>a,  .small>a>figure {
@@ -709,13 +718,13 @@ je crée donc des classes non incluse dans ma cascade*/
 
 .small>a>figure>img {
     width: 100%;
-    height: 74%;
+    height: 75px;
     object-fit: cover;
 }
 
 .small > a > figure > figcaption {
     width: 100%;
-    height: 25%;
+    height: 32px;
     padding-left: 5%;
 }
 
@@ -724,16 +733,27 @@ je crée donc des classes non incluse dans ma cascade*/
 
 @media all and (min-width: 200px) and (max-width: 768px) {
 
-
-
-    .column-2 > div > a > figure {
-        width: 100%;
+    #three article {
+        width: 92%;
+        height: 100%;
+        margin: auto;
     }
 
-
-    .big, .medium, .small {
+    .column-1, .column-2 {
         width: 100%;
-        height: 200px;
+        margin: 0 auto;
+
+    }
+
+    .big {
+        width: 100%;
+        height: 300px;
+        margin: 0 auto 50px;
+    }
+
+        .medium, .small {
+        width: 100%;
+        height: 300px;
         margin-bottom: 50px;
 
     }
@@ -771,6 +791,7 @@ je crée donc des classes non incluse dans ma cascade*/
 
 footer>nav {
     max-width: 992px;
+    padding: 0 2%;
     margin: 0 auto;
 }
 
