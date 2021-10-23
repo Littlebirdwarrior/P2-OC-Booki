@@ -106,6 +106,9 @@ header, main, footer {
 }
 
 /*justify-content*/
+.jc-start {
+    justify-content: flex-start;
+}
 .jc-end {
     justify-content: flex-end
 }
@@ -283,6 +286,9 @@ header, main, footer {
 h1, h2 {
     font-weight: bold;
     font-size: 16px;
+}
+
+h2 {
     margin: 0 0 20px;
 }
 
@@ -389,8 +395,140 @@ header nav li a:hover, header nav li a:active {
 
 /*    b-main-----------------*/
 
-main {
+
+/*-----section one*/
+
+#one {
+    max-width:992px;
+    margin: 0 auto;
+    padding: 0 0 2%;
 }
+
+#one >article {
+    width: 98%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/*h1*/
+
+#one >article>.titre {
+    padding: 10px;
+}
+
+#one>article>div>h1 {
+    margin-bottom: 5px;
+}
+
+#one>article>div>.form {
+    width: 170px;
+}
+
+/*form*/
+
+.form {
+    padding: 10px;
+}
+
+.icone {
+    display: block;
+    padding: 9px;
+    border-radius: 6px 0 0 6px;
+}
+
+#recherche {
+    border: #F2F2F2 1px solid;
+    border-radius: 0;
+    padding: 7px;
+    box-shadow: none;
+}
+
+/*filtre*/
+
+label {
+    all: inherit;
+    padding: 0;
+}
+
+.submit {
+    display: block;
+    padding: 9px;
+    border-radius: 0 6px 6px 0 ;
+}
+
+.filtre-content {
+    padding: 10px;
+    width: 80%;
+}
+
+.filtre-content>h4 {
+    width: 40px;
+}
+
+.filtre-button {
+    width: fit-content;
+}
+
+.filtre-button a {
+    font-weight: bold;
+    display: block;
+    background-color: white;
+    border: solid 1px #d5d5d5;
+    border-radius:20px;
+    padding-right: 12px;
+}
+
+.icone-2 {
+    font-size: 11px;
+    display: block;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    padding: 11px 9px 7px 9px;
+    border-radius:50%;
+    margin-right: 5px;
+    border: solid 1px #DEEBFF;
+    z-index: 1;
+}
+
+.filtre-button a:hover {
+    color: #0065FC;
+    background-color: #DEEBFF;
+}
+
+/*info*/
+.info {
+    width: 40%;
+    margin: 11px;
+}
+
+.icone-3 {
+    display: block;
+    font-size: 7px;
+    text-align: center;
+    width: 7px;
+    height: 7px;
+    padding: 3px;
+    border-radius:50%;
+    margin-right: 5px;
+    border: solid 1px #DEEBFF;
+    z-index: 1;
+}
+
+@media all and (min-width: 250px) and (max-width: 768px) {
+
+    .info {
+        width: 100%;
+        margin: 11px;
+    }
+
+    .filtre-content {
+        padding: 10px;
+        width: 100%;
+    }
+
+}
+
 
 /*-----section two*/
 #two {
