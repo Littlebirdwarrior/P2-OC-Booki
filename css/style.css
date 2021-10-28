@@ -288,10 +288,6 @@ h1, h2 {
     font-size: 16px;
 }
 
-h2 {
-    margin: 0 0 20px;
-}
-
 h4 {
     font-weight: bold;
     font-size: 12px;
@@ -309,6 +305,23 @@ a:hover {
     text-align: right;
 }
 
+/*    margin et ajustement-----------------*/
+
+.h2-ajust {
+    margin-left: 3%;
+    margin-bottom: 20px;
+}
+
+.h2-populaire {
+    margin-left: 3%;
+    margin-bottom: 20px;
+
+}
+
+.m-10 {
+    margin: 10px;
+}
+
 @media all and (min-width: 250px) and (max-width: 768px) {
 
     h1, h2 {
@@ -324,6 +337,13 @@ a:hover {
 
     p, a {
         font-size: 14px;
+    }
+
+    /*    margin et ajustement-----------------*/
+
+    .h2-ajust {
+        margin-left: 5%;
+        margin-bottom: 5%;
     }
 
 }
@@ -655,10 +675,12 @@ label {
 @media all and (min-width: 250px) and (max-width: 768px) {
 
     #two article {
-        width: 92%;
+        width: 100%;
         height: 100%;
-        margin: 0 auto;
+        margin: 0;
     }
+
+    /* ici, il ne faut pas toucher à l'article mais jouer avec la taille et la taille des div pour avoir quelque chose de propre*/
 
 
     /* je redimensionne la taille des deux conteneur gris*/
@@ -668,8 +690,9 @@ label {
     }
 
     .gray-left, .gray-right {
-        width: 100%;
-        margin: 0;
+        width: 98%;
+        padding: 0 2%;
+        margin: 0 auto;
     }
 
     .gray-left {
@@ -679,8 +702,11 @@ label {
 
     /*je redimensionne mes box de gauche*/
 
+    /* ici, il faut trouver pourquoi cela sort du html*/
+
+
     #two > article > div div .box-two {
-        width: 100%;
+        width: 89%;
         height:300px;
         margin: 0 auto 30px;
     }
@@ -695,9 +721,9 @@ label {
     /*je redimensionne mes box de droite*/
 
     #two > article > div .box-two-2 {
-        width: 98%;
+        width: 89%;
         height: 200px;
-        margin: 0 0 5%;
+        margin: 0 auto 5%;
     }
 
     .box-two-2>a>figure>img {
@@ -935,12 +961,11 @@ je crée donc des classes non incluse dans ma cascade*/
 
 footer>nav {
     max-width: 992px;
-    padding: 0 2%;
     margin: 0 auto;
 }
 
 footer nav div {
-    padding: 2% 0;
+    padding: 2% 5%;
 }
 
 footer nav div ul li {
@@ -961,16 +986,22 @@ footer nav div h4 {
 
     footer>nav {
         max-width: 80%;
-        padding: 2%;
+        padding: 5%;
         margin: 0 auto;
     }
+
+    footer nav div {
+        margin: 0 0 10px;
+    }
+
+
 
     footer nav div ul li {
         padding: 0 0 2%;
     }
 
     footer nav div h4 {
-        padding: 0 0 3%;
+        padding: 0 0 4%;
     }
 
     /*-------------------------------------*/
