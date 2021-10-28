@@ -544,7 +544,7 @@ label {
 
     .filtre-content {
         padding: 10px;
-        width: 100%;
+        width: 89%;
     }
 
 }
@@ -554,7 +554,6 @@ label {
 #two {
     max-width:992px;
     margin: 0 auto 5%;
-    padding: 0 0 5%;
 }
 
 #two >article {
