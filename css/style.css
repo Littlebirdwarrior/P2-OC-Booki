@@ -557,13 +557,13 @@ main {
     /*je redimensionne mes box de droite*/
 
     #two > article > div .box-two-2 {
-        width: 100%;
+        width: 98%;
         height: 200px;
         margin: 0 0 5%;
     }
 
     .box-two-2>a>figure>img {
-        width: 200px;
+        width: 30%;
         height: 200px;
         object-fit: cover;
         border-radius: 10px 0 0 10px;
@@ -593,7 +593,6 @@ main {
     .box-two > a > figure > figcaption > ul,
     .box-two-2 > a > figure > figcaption > ul{
         width: 15%;
-        margin: 100px 0 0;
     }
 
 
@@ -634,6 +633,12 @@ je crée donc des classes non incluse dans ma cascade*/
 
 /*la grande box de gauches*/
 
+.big {
+    width: 194px;
+    height: 290px;
+
+}
+
 .big > a {
     display: block;
     width: 100%;
@@ -642,7 +647,7 @@ je crée donc des classes non incluse dans ma cascade*/
 
 .big > a > figure {
     width: 194px;
-    height: 290px;
+    height: 100%;
 }
 
 .big > a > figure > img {
@@ -662,8 +667,9 @@ je crée donc des classes non incluse dans ma cascade*/
 
 /*redimentionner les colonnes*/
 
-.column-1, .column-2 {
-    width: 416px;
+.column-2 {
+    width: 194px;
+
 }
 
 .column-2> div > a {
