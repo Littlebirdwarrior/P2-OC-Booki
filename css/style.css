@@ -33,6 +33,10 @@ p, a, b {
 
 /* style généraux*/
 
+html {
+    overflow-x: hidden;
+}
+
 html, body {
     width: 100%;
     padding: 0;
@@ -83,6 +87,9 @@ body {
     display: flex;
 }
 
+.none {
+    display: none;
+}
 /*-------applicable sur le parents*/
 
 
@@ -108,6 +115,7 @@ body {
 .jc-start {
     justify-content: flex-start;
 }
+
 .jc-end {
     justify-content: flex-end
 }
@@ -167,6 +175,10 @@ body {
 @media all and (min-width: 250px) and (max-width: 768px) {
 
     /*flex & display*/
+    .resp-inline {
+        display: inline;
+    }
+
     .resp-none {
         display: none;
     }
@@ -338,8 +350,8 @@ a:hover {
 
     h1, h2 {
         font-weight: bold;
-        font-size: 18px;
-        margin: 10px;
+        font-size: 20px;
+        margin: 20px 10px;
     }
 
     h4 {
@@ -385,7 +397,6 @@ header nav {
 header nav li {
     width: 50%;
     padding: 10% 0 0;
-    font-size: 13px;
 }
 
 header nav li a {
@@ -418,7 +429,10 @@ header nav li a:hover, header nav li a:active {
 
     header nav li {
         padding: 0 0 2%;
-        font-size: 18px;
+    }
+
+    header nav li a {
+        font-size: 14px;
     }
 
     header nav li:hover, header nav li:active {
@@ -493,11 +507,6 @@ label {
     border-radius: 0 6px 6px 0 ;
 }
 
-.submit:hover {
-    color: #0065FC;
-    background-color: #DEEBFF;
-}
-
 .filtre-content {
     padding: 10px;
     width: 80%;
@@ -557,6 +566,11 @@ label {
 
 /*****-------------------------------les hovers*/
 
+.submit:hover {
+    color: #0065FC;
+    background-color: #DEEBFF;
+}
+
 .filtre-button a:hover {
     border: #DEEBFF 1px solid;
     color: #0065FC;
@@ -577,6 +591,23 @@ label {
         width: 100%;
         margin: 11px;
     }
+
+    .icone {
+        display: block;
+        padding: 9px 10px 10px 10px;
+        border-radius: 6px 0 0 6px;
+    }
+
+    #recherche {
+        padding: 12px 10px 8px 10px;
+    }
+
+    .submit {
+        display: block;
+        padding: 10px;
+        border-radius: 0 6px 6px 0 ;
+    }
+
 
     .filtre-content {
         padding: 10px;
