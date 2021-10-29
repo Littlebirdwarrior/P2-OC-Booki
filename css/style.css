@@ -76,7 +76,7 @@ body {
 
 /*-------------------------------------*/
 
-/*    a-flexbox-----------------*/
+/*    a-flexbox & display-----------------*/
 
 .flex {
     display: flex;
@@ -165,6 +165,11 @@ body {
 
 @media all and (min-width: 250px) and (max-width: 768px) {
 
+    /*flex & display*/
+    .resp-none {
+        display: none;
+    }
+
     /*flex direction*/
     .resp-row {
         flex-direction: row;
@@ -179,6 +184,11 @@ body {
     }
 
     /*Responsive justify-content*/
+
+    .resp-jc-start {
+        justify-content: start;
+    }
+
     .resp-jc-center {
         justify-content: center;
     }
@@ -347,6 +357,10 @@ a:hover {
         margin-bottom: 5%;
     }
 
+    .resp-m-0 {
+       margin: 0;
+    }
+
 }
 
 
@@ -434,6 +448,7 @@ header nav li a:hover, header nav li a:active {
 /*h1*/
 
 #one >article>.titre {
+    width: 80%;
     padding: 10px;
 }
 
@@ -488,28 +503,30 @@ label {
 
 .filtre-button {
     width: fit-content;
+    margin: 5px;
 }
 
 .filtre-button a {
+    color: #000;
     font-weight: bold;
     display: block;
     background-color: white;
     border: solid 1px #e5e5e5;
-    border-radius:20px;
+    border-radius: 35px;
     padding-right: 12px;
+    white-space: nowrap;
 }
 
 .icone-2 {
-    font-size: 11px;
+    font-size: 13px;
     display: block;
     text-align: center;
-    width: 15px;
-    height: 15px;
-    padding: 11px 9px 7px 9px;
-    border-radius:50%;
-    margin-right: 5px;
-    border: solid 2px #DEEBFF;
-    z-index: 1;
+    width: 16px;
+    height: 16px;
+    padding: 10px 9px 6px 9px;
+    border-radius: 50%;
+    margin-right: 6px;
+    /*border: solid 2px #DEEBFF;*/
 }
 
 
