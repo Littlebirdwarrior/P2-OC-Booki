@@ -13,6 +13,7 @@ ficher style.css*/
     a-header
     b-body
     c-footer
+    d-les hovers
 3-mediaqueries
     a-flexbox
     b-fonts et taille de fonts
@@ -492,6 +493,11 @@ label {
     border-radius: 0 6px 6px 0 ;
 }
 
+.submit:hover {
+    color: #0065FC;
+    background-color: #DEEBFF;
+}
+
 .filtre-content {
     padding: 10px;
     width: 80%;
@@ -694,9 +700,18 @@ label {
     margin: 5px 0 0;
 }
 
+/*je mets un gris de base sur mes étoiles*/
+
 .box-two > a > figure > figcaption > ul >li,
 .box-two-2 > a > figure > figcaption > ul >li{
     color: #d5d5d5;
+}
+
+/*le gris de mes étoiles change de couleurs dans les hover*/
+
+.box-two:hover > a > figure > figcaption > ul >li,
+.box-two-2:hover > a > figure > figcaption > ul >li{
+    color: #a3bbd7;
 }
 
 /***********************------------------MEDIA*/
@@ -1035,6 +1050,75 @@ footer nav div h4 {
 
     /*-------------------------------------*/
 }
+
+/*    d-les hovers des boxes-----------------*/
+
+/*----------section #two*/
+/*les box-two (une ombre et un background)*/
+.box-two:hover, .box-two-2:hover {
+    background:  #DEEBFF;
+    box-shadow: 5px 5px 30px #b6b6b6;
+    border-color: #DEEBFF;
+}
+/*les h4 en dark blue*/
+.box-two:hover >a>figure>figcaption>h4,.box-two-2:hover >a>figure>figcaption>div>h4 {
+    color: #0065FC;
+}
+
+/*les images (une modification des couleurs, et un effet flash)*/
+
+.box-two:hover >a>figure>img, .box-two-2:hover >a>figure>img {
+    filter: contrast(150%) sepia(5%) hue-rotate(25deg);
+    -webkit-filter: contrast(150%) sepia(5%) hue-rotate(25deg);
+    -webkit-animation: flash 1s;
+    animation: flash 1s;
+}
+
+/*----------section #three*/
+
+/*les box-three (une ombre et un background)*/
+.box-three:hover {
+    background: linear-gradient(217deg, #F2F2F2, #DEEBFF 70.71%),
+    linear-gradient(127deg, #F2F2F2, #DEEBFF 80.71%),
+    linear-gradient(336deg, #F2F2F2, #DEEBFF 60.71%);
+    box-shadow: 5px 5px 40px #c0c0c0;
+}
+
+/*les h4 en dark blue*/
+
+.box-three:hover >figcaption>h4 {
+    color: #0065FC;
+}
+
+/*les images (une modification des couleurs, et un effet flash)*/
+
+.box-three:hover img {
+    filter: contrast(120%) sepia(20%) hue-rotate(15deg);
+    -webkit-filter: contrast(120%) sepia(20%) hue-rotate(15deg);
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: .6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes flash {
+    0% {
+        opacity: .6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 
 
 /*3-mediaqueries & responsive---------------------------------------------------------*/
