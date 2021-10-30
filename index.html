@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, user-scalable=no,initial-scale=1" name="viewport"/>
-    <meta content="index,follow" name="robots"><!-- All Search Engines -->
-    <meta content="index,follow" name="googlebot"><!-- Google Specific -->
-    <meta content="vscode" name="generator">
+    <meta content="webstorm" name="generator">
     <!--MOBILE-->
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
     <!-- taille du device (responsive) -->
@@ -15,17 +13,6 @@
     <link href="img/logo/favicone.png" rel="icon" type="image/png">
     <!--fichier .png de 512 x 512 px -->
 
-    <!--FACEBOOK-->
-    <meta content="" property="og:image">
-    <meta content="" property="og:image:secure_url">
-    <meta content="image/jpg" property="og:image:type">
-    <meta content="1200" property="og:image:width">
-    <meta content="600" property="og:image:height">
-    <meta content="website" property="og:type">
-    <meta content="" property="og:url">
-    <meta content="Bokki - Réservation de votre hébergement de vacances" property="og:title">
-    <meta content="" property="og:description">
-
     <!-- importer la typo-->
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
@@ -33,6 +20,7 @@
     <link href="css/reset.css" rel="stylesheet"/>
     <!-- mes css perso pour la LP -->
     <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/mediaqueries.css" rel="stylesheet"/>
     <!--les icone fontawsome-->
     <link href="fontawesome-free-6.0.0-beta2-web/webfonts/fa-brands-400.ttf" rel="stylesheet">
     <!--feuille de style-->
@@ -71,8 +59,12 @@
                 <div class="flex ai-baseline form">
                     <i class="fas fa-map-marker-alt icone black bg-gray"></i>
                     <label><input type="text" id="recherche" name="Recherche" placeholder="Marseille, France"/></label>
-                    <a href="#" class="submit white bold bg-dark-blue">
+                    <a href="#" class="submit white bold bg-dark-blue block resp-none">
                       Recherchez
+                    </a>
+
+                    <a href="#" class="none resp-inline submit white bold bg-dark-blue">
+                        <i class="fas fa-search"></i>
                     </a>
 
                 </div>
@@ -96,7 +88,7 @@
                     </ul>
                 </div>
 
-                <a href="#" class="info flex ai-end">
+                <a href="#" class="info flex ai-end resp-ai-center">
                     <i class="fas fa-info icone-3 dark-blue"></i>
                     Plus de 500 logements sont disponibles
                 </a>
@@ -295,7 +287,7 @@
                 <!----------titre---->
                 <div class=" flex row jc-between ai-baseline">
                 <h2 class="h2-populaire">Les plus populaire </h2>
-                    <i class=" fa fa-chart-line text-right"></i>
+                    <a href="#"><i class=" fa fa-chart-line text-right black"></i></a>
                 </div>
                 <!-----------debut colonne------->
                 <!---------box--------->

@@ -1,0 +1,374 @@
+/*3-mediaqueries & responsive---------------------------------------------------------*/
+
+/*organisation du fichier
+1-styles généraux et classe réutilisatbles
+    a-flexbox & display
+    b-couleurs
+    c-fonts et taille de fonts
+2-Style particuliers
+    a-header
+    b-body
+    c-footer
+    d-les hovers
+ */
+
+/*----------------------------------------------------*/
+
+/*1-styles généraux et classes réutilisatbles---------------------------------------------------------*/
+
+/* reset perso*/
+
+/******************************--------------------------MEDIA Desktop*/
+
+
+/* Sur  desktop*/
+@media all and (min-width: 768px) {
+
+
+    /*1-styles généraux et classes réutilisatbles---------------------------------------------------------*/
+
+    /* reset perso*/
+
+    /*pour laisser quelque marge à gauche et à droite, je mets la max-width à 950*/
+    header, main {
+        min-width: 768px;
+        max-width: 950px;
+        margin: 0 auto;
+    }
+
+
+
+}
+
+
+/******************************--------------------------MEDIA Mobile*/
+
+/* Sur mobile */
+@media all and (max-width: 768px) {
+
+    /*1-styles généraux et classes réutilisatbles---------------------------------------------------------*/
+
+    /* reset perso*/
+
+    body {
+        font-size: 18px;
+    }
+
+    header, main, footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /*    a-flexbox & display-----------------*/
+    /*flex & display*/
+    .resp-inline {
+        display: inline;
+    }
+
+    .resp-none {
+        display: none;
+    }
+
+    /*flex direction*/
+    .resp-row {
+        flex-direction: row;
+    }
+
+    .resp-column {
+        flex-direction: column;
+    }
+
+    .resp-column-reverse {
+        flex-direction: column-reverse;
+    }
+
+    /*Responsive justify-content*/
+
+    .resp-jc-start {
+        justify-content: start;
+    }
+
+    .resp-jc-center {
+        justify-content: center;
+    }
+
+    .resp-jc-around {
+        justify-content: space-around;
+    }
+
+    /*align-content*/
+    .resp-ai-start {
+        align-items: flex-start
+    }
+
+    .resp-ai-center {
+        align-items: center;
+    }
+
+    /*    c-fonts et taille de fonts-----------------*/
+
+    h1, h2 {
+        font-weight: bold;
+        font-size: 20px;
+        margin: 20px 10px;
+    }
+
+    h4 {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    p, a, a:active {
+        font-size: 14px;
+    }
+
+    /*    margin et ajustement-----------------*/
+
+    .h2-ajust {
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+
+    .resp-m-0 {
+        margin: 0;
+    }
+
+    /*2-Style particuliers---------------------------------------------------------*/
+
+    /*    a-header-----------------*/
+
+    header nav {
+        width: 100%;
+    }
+
+    header div {
+        margin: auto;
+    }
+
+    header nav li {
+        padding: 0 0 2%;
+    }
+
+    header nav li a {
+        font-size: 14px;
+    }
+
+    header nav li:hover, header nav li:active {
+        border-top: inherit;
+        border-bottom: solid 2px #0065FC;
+    }
+
+    /*    b-main-----------------*/
+
+    /*-----section one*/
+
+    .info {
+        width: 100%;
+        margin: 11px;
+    }
+
+    .icone {
+        display: block;
+        padding: 9px 10px 10px 10px;
+        border-radius: 6px 0 0 6px;
+    }
+
+    #recherche {
+        padding: 12px 10px 8px 10px;
+    }
+
+    .submit {
+        padding: 10px;
+        border-radius: 0 6px 6px 0 ;
+    }
+
+
+    .filtre-content {
+        padding: 10px;
+        width: 89%;
+    }
+
+    .icone-3 {
+
+        font-size: 10px;
+        text-align: center;
+        width: 15px;
+        height: 15px;
+        padding: 6px 5px 4px 5px;
+        border-radius:50%;
+        margin-right: 5px;
+        border: solid 1px #e8e8e8;
+    }
+
+    /*-----section two*/
+
+    #two article {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    /* ici, il ne faut pas toucher à l'article mais jouer avec la taille et la taille des div pour avoir quelque chose de propre*/
+
+
+    /* je redimensionne la taille des deux conteneur gris*/
+    #two > article > div {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .gray-left, .gray-right {
+        width: 98%;
+        padding: 0 2%;
+        margin: 0 auto;
+    }
+
+    .gray-left {
+        background-color: #fff;
+    }
+
+
+    /*je redimensionne mes box de gauche*/
+
+    /* ici, il faut trouver pourquoi cela sort du html*/
+
+
+    #two > article > div div .box-two {
+        width: 89%;
+        height:300px;
+        margin: 0 auto 30px;
+    }
+
+    .box-two > a > figure > img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    /*je redimensionne mes box de droite*/
+
+    #two > article > div .box-two-2 {
+        width: 89%;
+        height: 200px;
+        margin: 0 auto 5%;
+    }
+
+    .box-two-2>a>figure>img {
+        width: 30%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+    }
+
+
+    /*je redimensionne les figure de mes boxes*/
+    .box-two > a > figure > figcaption {
+        width: 100%;
+        height: 200px;
+        padding-left: 2%;
+    }
+
+    .box-two-2>a>figure>figcaption {
+        width: auto;
+        height: 70px;
+        padding: 10px;
+    }
+
+    .box-two > a > figure > figcaption > h4{
+        margin: 20px 0 0;
+    }
+    .box-two-2 > a > figure > figcaption > div> h4{
+        margin: 0;
+    }
+
+    .box-two > a > figure > figcaption > p,
+    .box-two-2 > a > figure > figcaption > div> p{
+        margin: 10px 0;
+    }
+
+    .box-two > a > figure > figcaption > ul,
+    .box-two-2 > a > figure > figcaption >div> ul{
+        width: 56px;
+    }
+
+    .box-two-2 > a > figure > figcaption > ul{
+        margin-top: 100px;
+    }
+
+    /*-----section three*/
+
+    #three article {
+        width: 92%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .column-2 {
+        width: 100%;
+        margin: 0 auto;
+
+    }
+
+    .big {
+        width: 100%;
+        height: 300px;
+        margin: 0 auto 50px;
+    }
+
+    .medium, .small {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 50px;
+
+    }
+
+    .big>a, .medium>a, .small>a {
+        width: 100%;
+        height: 100%;
+    }
+
+    .big>a> figure, .medium> a>figure, .small>a>figure {
+        width: 100%;
+        height: 100%;
+    }
+
+    .big>a>figure>img ,
+    .medium>a>figure>img,
+    .small>a>figure>img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+    }
+
+    .big > a > figure > figcaption,
+    .medium > a > figure > figcaption ,
+    .small > a > figure > figcaption {
+        width: 100%;
+        height: 18%;
+        padding-left: 5%;
+    }
+
+    /*    c-footer-----------------*/
+
+    footer>nav {
+        max-width: 80%;
+        padding: 5%;
+        margin: 0 auto;
+    }
+
+    footer nav div {
+        margin: 0 0 10px;
+    }
+
+
+
+    footer nav div ul li {
+        padding: 0 0 2%;
+    }
+
+    footer nav div h4 {
+        padding: 0 0 4%;
+    }
+
+}

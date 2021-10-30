@@ -6,7 +6,7 @@ ficher style.css*/
 
 /*organisation du fichier
 1-styles généraux et classe réutilisatbles
-    a-flexbox
+    a-flexbox & display
     b-couleurs
     c-fonts et taille de fonts
 2-Style particuliers
@@ -14,14 +14,13 @@ ficher style.css*/
     b-body
     c-footer
     d-les hovers
+    ---------------------- sur médiaqueries.css
 3-mediaqueries
-    a-flexbox
-    b-fonts et taille de fonts
-    c-styles particuliers
+
 */
 /*----------------------------------------------------*/
 
-/*1-styles généraux et classe reutilisatbles---------------------------------------------------------*/
+/*1-styles généraux et classes réutilisatbles---------------------------------------------------------*/
 
 /* reset perso*/
 
@@ -56,28 +55,6 @@ body {
 /******************************--------------------------MEDIA*/
 
 
-/* Sur  desktop*/
-@media all and (min-width: 768px) {
-
-    header, main {
-        min-width: 768px;
-        max-width: 992px;
-        margin: 0 auto;
-    }
-}
-
-/* Sur mobile */
-@media all and (max-width: 768px) {
-
-    body {
-        font-size: 18px;
-    }
-
-    header, main, footer {
-        width: 100%;
-        margin: 0 auto;
-    }
-}
 
 /*-------------------------------------*/
 
@@ -89,6 +66,10 @@ body {
 
 .none {
     display: none;
+}
+
+.block {
+    display: block;
 }
 /*-------applicable sur le parents*/
 
@@ -172,50 +153,7 @@ body {
 
 /************************------------MEDIA*/
 
-@media all and (min-width: 250px) and (max-width: 768px) {
 
-    /*flex & display*/
-    .resp-inline {
-        display: inline;
-    }
-
-    .resp-none {
-        display: none;
-    }
-
-    /*flex direction*/
-    .resp-row {
-        flex-direction: row;
-    }
-
-    .resp-column {
-        flex-direction: column;
-    }
-
-    .resp-column-reverse {
-        flex-direction: column-reverse;
-    }
-
-    /*Responsive justify-content*/
-
-    .resp-jc-start {
-        justify-content: start;
-    }
-
-    .resp-jc-center {
-        justify-content: center;
-    }
-
-    .resp-jc-around {
-        justify-content: space-around;
-    }
-
-    /*align-content*/
-    .resp-ai-start {
-        align-items: flex-start
-    }
-
-}
 
 /*-------------------------------------*/
 
@@ -267,38 +205,11 @@ body {
     background-color: #0065FC;
 }
 
-/*******************************************-----------------*/
 
-.yellow {
-    background-color: yellow
-}
-
-.green {
-    background-color: darkseagreen
-}
-
-.ciel {
-    background-color: cornflowerblue
-}
-
-.red {
-    background-color: indianred
-}
-
-.orange {
-    background-color: orange
-}
 
 /*    c-fonts et taille de fonts-----------------*/
 
 /* font style*/
-.raleway {
-    font-family: 'Raleway', sans-serif;
-}
-
-.regular {
-    font-weight: 400;
-}
 
 .bold {
     font-weight: 700;
@@ -346,35 +257,6 @@ a:hover {
     margin: 10px;
 }
 
-@media all and (min-width: 250px) and (max-width: 768px) {
-
-    h1, h2 {
-        font-weight: bold;
-        font-size: 20px;
-        margin: 20px 10px;
-    }
-
-    h4 {
-        font-weight: bold;
-        font-size: 16px;
-    }
-
-    p, a {
-        font-size: 14px;
-    }
-
-    /*    margin et ajustement-----------------*/
-
-    .h2-ajust {
-        margin-left: 5%;
-        margin-bottom: 5%;
-    }
-
-    .resp-m-0 {
-       margin: 0;
-    }
-
-}
 
 
 /*2-Style particuliers---------------------------------------------------------*/
@@ -416,30 +298,6 @@ header nav li a:hover, header nav li a:active {
     color: #0065FC;
 }
 
-/***********************------------------MEDIA*/
-
-@media all and (min-width: 250px) and (max-width: 768px) {
-    header nav {
-        width: 100%;
-    }
-
-    header div {
-        margin: auto;
-    }
-
-    header nav li {
-        padding: 0 0 2%;
-    }
-
-    header nav li a {
-        font-size: 14px;
-    }
-
-    header nav li:hover, header nav li:active {
-        border-top: inherit;
-        border-bottom: solid 2px #0065FC;
-    }
-}
 
 /*-------------------------------------*/
 
@@ -449,7 +307,7 @@ header nav li a:hover, header nav li a:active {
 /*-----section one*/
 
 #one {
-    max-width:992px;
+    max-width:950px;
     margin: 0 auto;
     padding: 0 0 2%;
 }
@@ -502,7 +360,6 @@ label {
 }
 
 .submit {
-    display: block;
     padding: 9px;
     border-radius: 0 6px 6px 0 ;
 }
@@ -561,7 +418,6 @@ label {
     border-radius:50%;
     margin-right: 5px;
     border: solid 1px #f5f5f5;
-    z-index: 1;
 }
 
 /*****-------------------------------les hovers*/
@@ -569,6 +425,7 @@ label {
 .submit:hover {
     color: #0065FC;
     background-color: #DEEBFF;
+    border-color: #DEEBFF;
 }
 
 .filtre-button a:hover {
@@ -585,41 +442,10 @@ label {
     border: solid 1px #0065FC;
 }
 
-@media all and (min-width: 250px) and (max-width: 768px) {
-
-    .info {
-        width: 100%;
-        margin: 11px;
-    }
-
-    .icone {
-        display: block;
-        padding: 9px 10px 10px 10px;
-        border-radius: 6px 0 0 6px;
-    }
-
-    #recherche {
-        padding: 12px 10px 8px 10px;
-    }
-
-    .submit {
-        display: block;
-        padding: 10px;
-        border-radius: 0 6px 6px 0 ;
-    }
-
-
-    .filtre-content {
-        padding: 10px;
-        width: 89%;
-    }
-
-}
-
 
 /*-----section two*/
 #two {
-    max-width:992px;
+    max-width:950px;
     margin: 0 auto 5%;
 }
 
@@ -745,102 +571,9 @@ label {
     color: #a3bbd7;
 }
 
-/***********************------------------MEDIA*/
-
-@media all and (min-width: 250px) and (max-width: 768px) {
-
-    #two article {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-
-    /* ici, il ne faut pas toucher à l'article mais jouer avec la taille et la taille des div pour avoir quelque chose de propre*/
-
-
-    /* je redimensionne la taille des deux conteneur gris*/
-    #two > article > div {
-        padding: 0;
-        border-radius: 0;
-    }
-
-    .gray-left, .gray-right {
-        width: 98%;
-        padding: 0 2%;
-        margin: 0 auto;
-    }
-
-    .gray-left {
-        background-color: #fff;
-    }
-
-
-    /*je redimensionne mes box de gauche*/
-
-    /* ici, il faut trouver pourquoi cela sort du html*/
-
-
-    #two > article > div div .box-two {
-        width: 89%;
-        height:300px;
-        margin: 0 auto 30px;
-    }
-
-    .box-two > a > figure > img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 10px 10px 0 0;
-    }
-
-    /*je redimensionne mes box de droite*/
-
-    #two > article > div .box-two-2 {
-        width: 89%;
-        height: 200px;
-        margin: 0 auto 5%;
-    }
-
-    .box-two-2>a>figure>img {
-        width: 30%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px 0 0 10px;
-    }
-
-
-    /*je redimensionne les figure de mes boxes*/
-    .box-two > a > figure > figcaption {
-        width: 100%;
-        height: 200px;
-        padding-left: 2%;
-    }
-
-    .box-two-2>a>figure>figcaption {
-        width: auto;
-        height: 70px;
-        padding: 10px;
-    }
-
-    .box-two > a > figure > figcaption > h4{
-        margin: 20px 0 0;
-    }
-    .box-two-2 > a > figure > figcaption > div> h4{
-        margin: 0;
-    }
-
-    .box-two > a > figure > figcaption > ul,
-    .box-two-2 > a > figure > figcaption > ul{
-        width: 15%;
-    }
-
-
-
-}
 
 /*-----section three*/
 
-/************************** SOUCIS : gouttière inégale si taille supérieur à 992px*/
 #three {
     max-width:992px;
     margin: 0 auto;
@@ -867,8 +600,6 @@ je crée donc des classes non incluse dans ma cascade*/
 .box-three img {
     border-radius: 10px 10px 0 0;
 }
-
-/*------------------ les tailles en % des boxes: avec les pixel, le site était trop petit sur un viewer de plus de 992px*/
 
 /*la grande box de gauches*/
 
@@ -974,63 +705,6 @@ je crée donc des classes non incluse dans ma cascade*/
 }
 
 
-/***********************------------------MEDIA*/
-
-@media all and (min-width: 200px) and (max-width: 768px) {
-
-    #three article {
-        width: 92%;
-        height: 100%;
-        margin: auto;
-    }
-
-     .column-2 {
-        width: 100%;
-        margin: 0 auto;
-
-    }
-
-    .big {
-        width: 100%;
-        height: 300px;
-        margin: 0 auto 50px;
-    }
-
-        .medium, .small {
-        width: 100%;
-        height: 300px;
-        margin-bottom: 50px;
-
-    }
-
-    .big>a, .medium>a, .small>a {
-        width: 100%;
-        height: 100%;
-    }
-
-    .big>a> figure, .medium> a>figure, .small>a>figure {
-        width: 100%;
-        height: 100%;
-    }
-
-    .big>a>figure>img ,
-    .medium>a>figure>img,
-    .small>a>figure>img {
-        width: 100%;
-        height: 80%;
-        object-fit: cover;
-    }
-
-    .big > a > figure > figcaption,
-    .medium > a > figure > figcaption ,
-    .small > a > figure > figcaption {
-        width: 100%;
-        height: 18%;
-        padding-left: 5%;
-    }
-
-}
-
 
 /*    c-footer-----------------*/
 
@@ -1055,32 +729,6 @@ footer nav div h4 {
     padding: 0 0 4%;
 }
 
-/***********************------------------MEDIA*/
-
-@media all and (min-width: 250px) and (max-width: 768px) {
-
-    footer>nav {
-        max-width: 80%;
-        padding: 5%;
-        margin: 0 auto;
-    }
-
-    footer nav div {
-        margin: 0 0 10px;
-    }
-
-
-
-    footer nav div ul li {
-        padding: 0 0 2%;
-    }
-
-    footer nav div h4 {
-        padding: 0 0 4%;
-    }
-
-    /*-------------------------------------*/
-}
 
 /*    d-les hovers des boxes-----------------*/
 
@@ -1092,7 +740,8 @@ footer nav div h4 {
     border-color: #DEEBFF;
 }
 /*les h4 en dark blue*/
-.box-two:hover >a>figure>figcaption>h4,.box-two-2:hover >a>figure>figcaption>div>h4 {
+.box-two:hover >a>figure>figcaption>h4,
+.box-two-2:hover >a>figure>figcaption>div>h4 {
     color: #0065FC;
 }
 
@@ -1149,16 +798,6 @@ footer nav div h4 {
     }
 }
 
-
-
-
-/*3-mediaqueries & responsive---------------------------------------------------------*/
-
-/*    a-flexbox-----------------*/
-
-/*    b-fonts et taille de fonts-----------------*/
-
-/*    c-styles particuliers-----------------*/
 
 
 
