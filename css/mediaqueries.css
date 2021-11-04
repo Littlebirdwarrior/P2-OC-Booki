@@ -133,6 +133,11 @@
         margin: 0;
     }
 
+    .resp-w-93 {
+        width: 93%;
+        margin: auto;}
+
+
     /*2-Style particuliers---------------------------------------------------------*/
 
     /*    a-header-----------------*/
@@ -178,8 +183,8 @@
     }
 
     .submit {
-        padding: 10px;
-        border-radius: 0 6px 6px 0 ;
+        padding: 11px 11px 9px;
+        border-radius: 8px;
     }
 
 
@@ -218,8 +223,8 @@
     }
 
     .gray-left, .gray-right {
-        width: 98%;
-        padding: 0 2%;
+        width: 100%;
+        padding: 0;
         margin: 0 auto;
     }
 

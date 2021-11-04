@@ -88,10 +88,6 @@ body {
     flex-wrap: wrap;
 }
 
-.nowrap {
-    flex-wrap: nowrap;
-}
-
 /*justify-content*/
 .jc-start {
     justify-content: flex-start;
@@ -111,10 +107,6 @@ body {
 
 .jc-around {
     justify-content: space-around;
-}
-
-.jc-evently {
-    justify-content: space-evenly;
 }
 
 /*align-items*/
@@ -150,6 +142,7 @@ body {
 .ac-around {
     align-content: space-around;
 }
+
 
 /************************------------MEDIA*/
 
@@ -218,6 +211,7 @@ body {
 h1, h2 {
     font-weight: bold;
     font-size: 16px;
+    width: fit-content;
 }
 
 h4 {
@@ -248,15 +242,19 @@ a:hover {
 }
 
 .h2-populaire {
+    width: 75%;
     margin-left: 3%;
     margin-bottom: 20px;
-
 }
+
 
 .m-10 {
     margin: 10px;
 }
 
+.w-50 {
+  width: 50px;
+}
 
 
 /*2-Style particuliers---------------------------------------------------------*/
@@ -337,6 +335,7 @@ header nav li a:hover, header nav li a:active {
 
 .form {
     padding: 10px;
+    margin-left: 10px;
 }
 
 .icone {
@@ -347,9 +346,16 @@ header nav li a:hover, header nav li a:active {
 
 #recherche {
     border: #f2f2f2 1px solid;
+    margin: 0 -10px;
     border-radius: 0;
     padding: 7px;
     box-shadow: none;
+}
+
+#recherche::placeholder {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 /*filtre*/
@@ -360,12 +366,15 @@ label {
 }
 
 .submit {
-    padding: 9px;
-    border-radius: 0 6px 6px 0 ;
+    padding: 9px 9px 8px;
+    margin-top: -3px;
+    border-radius: 0 6px 6px 0;
+    border: #0065FC 1px solid;
 }
 
 .filtre-content {
     padding: 10px;
+    margin-left: 10px;
     width: 80%;
 }
 
